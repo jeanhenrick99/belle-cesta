@@ -1,0 +1,234 @@
+/* --- CONFIGURAÇÕES GERAIS --- */
+:root {
+    --bg: #0d0d0d;
+    --gold: #c9a84c;
+    --gold-soft: rgba(201, 168, 76, 0.2);
+    --text: #f0e8d5;
+    --text-muted: #9e8878;
+    --card-bg: #111111;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Jost', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* --- CABEÇALHO (HERO) --- */
+.hero {
+    position: relative;
+    padding: 6rem 2rem;
+    text-align: center;
+    border-bottom: 0.5px solid var(--gold-soft);
+}
+
+.corner {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-color: var(--gold-soft);
+    border-style: solid;
+}
+
+.corner-tl { top: 1.5rem; left: 1.5rem; border-width: 0.5px 0 0 0.5px; }
+.corner-br { bottom: 1.5rem; right: 1.5rem; border-width: 0 0.5px 0.5px 0; }
+
+.brand-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    margin: 1rem 0;
+}
+
+.brand-sub {
+    font-size: 0.75rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.hero-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.cta-main {
+    background: transparent;
+    border: 0.5px solid var(--gold);
+    color: var(--gold);
+    padding: 1rem 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cta-main:hover {
+    background: var(--gold);
+    color: var(--bg);
+}
+
+/* --- SEÇÕES --- */
+.section-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+/* --- PASSOS (COMO FUNCIONA) --- */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.step-card {
+    text-align: center;
+    padding: 2rem;
+    border: 0.5px solid rgba(255,255,255,0.05);
+}
+
+.step-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    color: var(--gold-soft);
+    display: block;
+}
+
+/* --- GRID DE KITS & ANIMAÇÕES --- */
+.kits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.kit-card {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border: 0.5px solid rgba(201, 168, 76, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    top: 0;
+}
+
+.kit-card:hover {
+    top: -10px;
+    background: #161616;
+    border-color: var(--gold);
+    box-shadow: 0 10px 30px rgba(201, 168, 76, 0.15);
+}
+
+.kit-card.featured {
+    border-color: rgba(201, 168, 76, 0.5);
+    transform: scale(1.02);
+}
+
+.kit-card.featured:hover {
+    transform: scale(1.04);
+}
+
+.kit-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    color: var(--gold);
+    margin: 0.5rem 0 1rem;
+    font-weight: 300;
+}
+
+.kit-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.wa-btn {
+    text-align: center;
+    padding: 1.1rem;
+    border: 0.5px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    transition: 0.3s;
+}
+
+.wa-btn:hover {
+    background: rgba(201, 168, 76, 0.1);
+}
+
+.gold-bg {
+    background: var(--gold);
+    color: var(--bg);
+}
+
+/* --- TESTEMUNHOS & FAQ --- */
+.testimonials {
+    background: #0a0a0a;
+    padding: 4rem 0;
+    margin: 4rem 0;
+}
+
+.testimonial-card {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+.faq-container {
+    max-width: 700px;
+    margin: 0 auto 5rem;
+}
+
+details {
+    border-bottom: 0.5px solid var(--gold-soft);
+    padding: 1.5rem 0;
+    cursor: pointer;
+}
+
+summary {
+    color: var(--gold);
+    font-weight: 400;
+}
+
+.footer {
+    padding: 4rem;
+    text-align: center;
+    border-top: 0.5px solid var(--gold-soft);
+}
+
+.brand-name-small {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--gold);
+    margin-bottom: 1rem;
+}
